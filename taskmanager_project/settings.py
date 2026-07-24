@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tasks',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'task_manager_db',
         'USER': 'root',
-        'PASSWORD': 'your_mysql_password_here',
+        'PASSWORD': 'dUU$093Aaa.',
         'HOST': 'localhost',
         'PORT': '3306',
     }
