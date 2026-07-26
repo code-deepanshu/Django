@@ -1,5 +1,14 @@
 <h1>My Task List 📋</h1>
 
+<!-- Form to create a new task -->
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Task ➕</button>
+</form>
+
+<hr>
+
 <ul>
   {% for task in tasks %}
     <li>{{ task.title }}</li>
