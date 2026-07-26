@@ -11,14 +11,6 @@
 
 <ul>
   {% for task in tasks %}
-    <li>{{ task.title }}</li>
-  {% empty %}
-    <li>No tasks found!</li>
-  {% endfor %}
-</ul>
-
-<ul>
-  {% for task in tasks %}
     <li>
       {{ task.title }}
       <a href="{% url 'delete_task' task.id %}">❌ Delete</a>
@@ -27,5 +19,3 @@
     <li>No tasks found!</li>
   {% endfor %}
 </ul>
-
-<a href="{% url 'delete_task' task.id %}">❌ Delete</a>
