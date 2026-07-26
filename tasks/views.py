@@ -13,3 +13,11 @@ def home(request):
 
     tasks = Task.objects.all()
     return render(request, 'tasks/task_list.html', {'tasks': tasks, 'form': form})
+
+
+from django.shortcuts import render, redirect, get_object_or_404
+
+def delete_task(request, pk):
+    task = get_object_or_404(Task, id=pk)
+    task.delete()
+    return redirect('home')
