@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('delete/<int:pk>/', views.delete_task, name='delete_task'), # 👈 Added
+    path('delete/<int:pk>/', views.delete_task, name='delete_task'),
+    path('update/<int:pk>/', views.update_task, name='update_task'),  # 👈 Added
 ]
